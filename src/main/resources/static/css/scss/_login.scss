@@ -1,0 +1,180 @@
+/* :: Login CSS */
+
+.login-area {
+    .form-control {
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+.middle-box {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.login-icon {
+    a {
+        color: #fff;
+        background-color: #03c;
+        height: 35px;
+        width: 35px;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 37px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 5px;
+        transition-duration: 500ms;
+
+        &:hover,
+        &:focus {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.form-control.register {
+    height: 50px;
+    font-size: 12px;
+}
+
+.login-form,
+.register-form {
+    position: relative;
+    z-index: 1;
+
+    [type="checkbox"] + span:not(.lever)::before,
+    [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+        top: 0;
+    }
+}
+
+.login-area-2 {
+    position: relative;
+    z-index: 22;
+
+    .middle-box {
+        position: relative;
+        z-index: 9999;
+
+        h3 {
+            font-size: 30px;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+.card-body-login {
+    img {
+        max-height: 30px;
+    }
+}
+
+.middle-box {
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+    }
+
+    [type="checkbox"] + span:not(.lever) {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        display: inline-block;
+        height: 13px;
+        line-height: 25px;
+        font-size: 1rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    [type="checkbox"] + span:not(.lever)::before,
+    [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        z-index: 0;
+        border: 2px solid #777;
+        border-radius: 1px;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+    }
+
+    [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+        border: 0;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    [type="checkbox"] + span:not(.lever)::before,
+    [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        z-index: 0;
+        border: 2px solid #03c;
+        border-radius: 1px;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+    }
+
+    .widgets-todo-list-area .todo-list li [type="checkbox"]:checked + span:not(.lever)::before {
+        border-right: 2px solid #03c;
+        border-bottom: 2px solid #03c;
+    }
+
+    [type="checkbox"]:checked + span:not(.lever)::before {
+        top: -4px;
+        left: -5px;
+        width: 12px;
+        height: 22px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid #03c;
+        border-bottom: 2px solid #03c;
+        -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+        transform: rotate(40deg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+}
+
+
+/* ---- Particles Css ---- */
+
+#particles-js {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#particles-js canvas.particles-js-canvas-el {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: -1 !important;
+}

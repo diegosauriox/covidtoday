@@ -1,0 +1,263 @@
+/* :: Dashboard CSS */
+
+.corona-country-list {
+    padding: 15px;
+}
+
+.single-country-list {
+    @include display-flex(flex);
+    @include justify-content-between;
+    margin-bottom: 10px;
+}
+
+.single-country-list.active {
+    background-color: rgba(245, 56, 90, 0.15);
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+.single-country-list.active span {
+    color: $danger-color;
+}
+
+.single-country-list span {
+    color: #536484;
+}
+
+.single-country-list .count {
+    color: #333;
+}
+
+.things-do-area {
+    position: relative;
+    z-index: 1;
+}
+
+.things-title {
+    font-size: 18px;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+}
+
+
+.thing-image-text-content .image-area {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+    width: 40px;
+    max-width: 40px;
+    margin-right: 15px;
+}
+
+.things-not-to-do-area ul {
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+}
+
+.things-not-to-do-area li {
+    padding: 20px;
+    border-bottom: 1px solid $border-color;
+
+    @media #{$breakpoint-xs} {
+        padding: 20px 10px;
+    }
+
+    @media #{$breakpoint-sm} {
+        padding: 20px;
+    }
+}
+
+.thing-image-text-content .things-text h4 {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.thing-image-text-content .things-text p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.current-statistics {
+    padding: 15px;
+
+    h6 {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 15px;
+        font-weight: 700;
+    }
+
+    li {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.dashboard-infor-mation h6 {
+    @media #{$breakpoint-xs} {
+        display: none;
+    }
+}
+
+.dashboard-clock {
+    @media #{$breakpoint-xs} {
+        display: none;
+    }
+}
+
+.btn-primary {
+    background-color: #727cf5;
+    border-color: #727cf5;
+    box-shadow: 0 2px 5px 0 rgba(114, 124, 245, 0.6);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #556ee6;
+    border-color: #556ee6;
+}
+
+.single-widger-cart {
+    h5 {
+        color: rgba(255, 255, 255, 0.90);
+        text-transform: uppercase;
+    }
+
+    h3 {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 30px;
+    }
+}
+
+.country-count {
+    li {
+        font-weight: 500;
+    }
+}
+
+#mainContainer {
+    width: 100vw;
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    z-index: 30;
+}
+
+.current-statistics {
+    &.case {
+        background-color: rgba(74, 0, 224, 0.12);
+    }
+
+    &.death {
+        background-color: rgba(250, 92, 124, 0.15);
+    }
+
+    &.recovered {
+        background-color: rgba(4, 211, 159, 0.15);
+    }
+}
+
+.single-count-area {
+    text-align: center;
+
+    &.first {
+        background-color: rgba(42, 129, 234, 0.20);
+        color: $primary;
+
+        p {
+            background-color: $primary;
+        }
+    }
+
+    &.second {
+        background-color: rgba(4, 211, 159, 0.20);
+        color: #04d39f;
+
+        p {
+            background-color: #04d39f;
+        }
+    }
+
+    &.third {
+        background-color: rgba(250, 92, 124, 0.2);
+        ;
+        color: #fa5c7c;
+        ;
+
+        p {
+            background-color: #fa5c7c;
+            ;
+        }
+    }
+
+    &.four {
+        background-color: rgba(255, 155, 5, 0.20);
+        color: #ff9b05;
+
+        p {
+            background-color: #ff9b05;
+        }
+    }
+
+    .single-count-content {
+        padding: 30px 30px;
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+    }
+
+    p {
+        color: $white-color;
+        padding: 10px 30px;
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+}
+
+.currency-marquee-area {
+    width: 100%;
+    background: #f1f5fa;
+    height: 60px;
+    line-height: 66px;
+    cursor: pointer;
+    z-index: 22;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+
+[class*="js-conveyor-"] ul li {
+    padding: 0 5px;
+    line-height: 35px;
+    font-size: 15px;
+}
+.thumb-area{
+    img{
+        width: 100%;
+    }
+}
+.news-content{
+    a{
+        font-size: 18px;
+        color: $heading-color;
+        display: block;
+        margin-top: 20px;
+        @include transition-duration(500ms);
+        &:hover{
+            color: $primary;
+        }
+    }
+}

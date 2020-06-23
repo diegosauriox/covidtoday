@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Cotrak - Coronavirus Live Traker Admin</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.png">
+
+    <!-- These plugins only need for the run this page -->
+    <link rel="stylesheet" href="js/default-assets/vector-map/jquery-jvectormap-2.0.2.css">
+    <link rel="stylesheet" href="css/default-assets/jquery.jConveyorTicker.min.css">
+
+    <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
+    
+    
+    
+</head>
+
+<body>
+    <!-- Preloader -->
+    
+
+    <!-- ======================================
+    ******* Page Wrapper Area Start **********
+    ======================================= -->
+    <div class="ecaps-page-wrapper">
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+                <div class="container">
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo" href="index.html"><img src="img/core-img/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="img/core-img/small-logo.png" alt="logo" /></a>
+                    </div>
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item dropdown">
+                                <div class="dashboard-infor-mation d-flex flex-wrap align-items-center">
+                                    <h6 class="mb-0 mr-2 font-16 text-white">Date: </h6>
+                                    <div class="dashboard-clock">
+                                        <div class="font-14" id="dashboardDate"></div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                            <span class="ti-menu"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <nav class="bottom-navbar">
+                <div class="container">
+                    <ul class="nav page-navigation">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="bx bx-home-heart menu-icon"></i>
+                                <span class="menu-title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="out-break.html">
+                                <i class="bx bx-world menu-icon"></i>
+                                <span class="menu-title">Out Break</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="symptons.html">
+                                <i class="bx bx-certification menu-icon"></i>
+                                <span class="menu-title">Symptons</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">
+                                <i class="bx bx-calendar menu-icon"></i>
+                                <span class="menu-title">Calendar</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bx bx-bar-chart-square menu-icon"></i>
+                                <span class="menu-title">Charts</span>
+                                <i class="menu-arrow"></i></a>
+                            <div class="submenu">
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="apex-chart.html">Apex</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="chartist.html">Chartist</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="chart-js.html">Chart js</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="c3-charts.html">C3 chart</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="chart-knob.html">knob chart</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="morris-chart.html">Morris chart</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="flot-chart.html">Flot chart</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bx bx-user-circle menu-icon"></i>
+                                <span class="menu-title">Authentication</span>
+                                <i class="menu-arrow"></i></a>
+                            <div class="submenu">
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="forget-password.html">Forget Password</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="lock-screen.html">Lock screen</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="coming-soon.html">Coming soon</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bx bx-map menu-icon"></i>
+                                <span class="menu-title">Maps</span>
+                                <i class="menu-arrow"></i></a>
+                            <div class="submenu">
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="vector-map.html">Vector</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="google-map.html">Google</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="dashboard-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-18">COVID-19 Coronavirus Tracker</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Category -->
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <!-- Single Widget -->
+                                <div class="col-sm-12 col-md-6 col-lg-12">
+                                    <div class="single-widger-cart mb-30">
+                                        <div class="card bg-primary">
+                                            <div class="card-body">
+                                                <div class="float-right"><img src="img/bg-img/1.png" alt=""></div>
+                                                <h5 class="font-15">Total Cases</h5>
+                                                <h3 class="mb-0">5,2356</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Widget -->
+                                <div class="col-sm-12 col-md-6 col-lg-12">
+                                    <div class="single-widger-cart mb-30">
+                                        <div class="card bg-danger">
+                                            <div class="card-body">
+                                                <div class="float-right"><img src="img/bg-img/2.png" alt=""></div>
+                                                <h5 class="font-15">Total Death</h5>
+                                                <h3 class="mb-0">82,456</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Widget -->
+                                <div class="col-sm-12 col-md-6 col-lg-12">
+                                    <div class="single-widger-cart mb-30">
+                                        <div class="card bg-success">
+                                            <div class="card-body">
+                                                <div class="float-right"><img src="img/bg-img/4.png" alt=""></div>
+                                                <h5 class="font-15">Recovered</h5>
+                                                <h3 class="mb-0">1,2723</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Widget -->
+                                <div class="col-sm-12 col-md-6 col-lg-12">
+                                    <div class="single-widger-cart mb-30">
+                                        <div class="card bg-warning">
+                                            <div class="card-body">
+                                                <div class="float-right"><img src="img/bg-img/3.png" alt=""></div>
+                                                <h5 class="font-15">Helpline</h5>
+                                                <h3 class="mb-0">786</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 box-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-30-xs">
+                                            <div class="hide-phone country-search">
+                                                <input type="text" class="form-control" placeholder="Search...">
+                                                <span class="bx bx-search-alt"></span>
+                                            </div>
+                                            <div class="country-list" id="countrylist">
+                                                <ul class="corona-country-list">
+                                                    <li><a class="single-country-list" href="#"><span class="title">Worldwide</span><span class="count">854,670</span></a></li>
+                                                    <li><a class="single-country-list active" href="#"><span class="title">USA</span><span class="count">155,060</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Italy</span><span class="count">99,689</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Spain</span><span class="count">91,199</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">China</span><span class="count">85,470</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Germany</span><span class="count">63,929</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Iran</span><span class="count">41,495</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">France</span><span class="count">40,174</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">UK</span><span class="count">19,522</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Switzerland</span><span class="count">15,546</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Belgium</span><span class="count">11,899</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Netherlands</span><span class="count">11,750</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">South Korea</span><span class="count">9,661</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Turkey</span><span class="count">9,217</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Austria</span><span class="count">8,774</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Portugal</span><span class="count">6,408</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Canada</span><span class="count">6,308</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Norway</span><span class="count">4,419</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Israel</span><span class="count">4,347</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Brazil</span><span class="count">4,256</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Australia</span><span class="count">4,247</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Sweden</span><span class="count">4,106</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Czechia</span><span class="count">2,866</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Malaysia</span><span class="count">2,626</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Ireland</span><span class="count">2,615</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Denmark</span><span class="count">2,555</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Chile</span><span class="count">2,139</span></a></li>
+                                                    <li><a class="single-country-list" href="#"><span class="title">Romania</span><span class="count">1,952</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <div class="country-map">
+                                                <div class="box-header">
+                                                    <h5 class="card-title">Cases by Country</h5>
+                                                </div>
+
+                                                <div class="map--body">
+                                                    <div id="world-map-markers" class="height-450"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 box-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Recent News</h4>
+                                    <div class="corona-count-area">
+                                        <div class="row">
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="single-count-area first mb-30-xs mb-30-md">
+                                                    <div class="single-count-content">
+                                                        <h3><span class="cv-count">1739385</span></h3>
+                                                    </div>
+                                                    <p>Confirmed</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="single-count-area second mb-30-xs mb-30-md">
+                                                    <div class="single-count-content">
+                                                        <h3><span class="cv-count">50826</span></h3>
+                                                    </div>
+                                                    <p>Recovered</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="single-count-area third mb-30-xs">
+                                                    <div class="single-count-content">
+                                                        <h3><span class="cv-count">85986</span></h3>
+                                                    </div>
+                                                    <p>Deaths</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="single-count-area four">
+                                                    <div class="single-count-content">
+                                                        <h3><span class="cv-count">201</span>+</h3>
+                                                    </div>
+                                                    <p>Countries</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="currency-marquee-area js-conveyor-1">
+                                                    <ul class="bg-gradient-dark">
+                                                        <li>Immunization, Vaccines and Biologicals.</li>
+                                                        <li>Vaccines and diseases.</li>
+                                                        <li>Global Vaccine Action Plan.</li>
+                                                        <li>WHO policy recommendations.</li>
+                                                        <li>National programmes and systems.</li>
+                                                        <li>Monitoring and surveillance, Quality, safety and standards.</li>
+                                                        <li>During this challenging period, the Measles &amp; Rubella Initiative (M&amp;RI) expresses solidarity with families, communities, governments and emergency responders and joins.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8 box-margin height-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <h4 class="card-title">Latest Overview</h4>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="current-statistics mb-30-xs case">
+                                                <h6 class="mb-20 font-14">Today Cases</h6>
+                                                <ul id="country_todayCases" class="country-count">
+                                                    <li class="d-flex align-items-center justify-content-between">Mexico <span class="text-primary"> 346 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between">USA <span class="text-primary"> 205 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between">Panama <span class="text-primary"> 149 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between">Hungary <span class="text-primary">178 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between">China <span class="text-primary"> 262 </span> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="current-statistics mb-30-xs death">
+                                                <h6 class="mb-20 font-14">Today Death</h6>
+                                                <ul id="country_todayDeath" class="country-count">
+                                                    <li class="d-flex align-items-center justify-content-between"> Mexico <span class="text-danger"> 76 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> USA <span class="text-danger"> 93 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> S. Korea <span class="text-danger"> 80 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> Panama <span class="text-danger"> 84 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> China <span class="text-danger"> 72 </span> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="current-statistics recovered">
+                                                <h6 class="mb-20 font-14">Today Recovered</h6>
+                                                <ul id="country_recovered" class="country-count">
+                                                    <li class="d-flex align-items-center justify-content-between"> China <span class="text-success"> 77279 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> Spain <span class="text-success"> 43208 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> Germany <span class="text-success"> 36081 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> Iran <span class="text-success"> 27039 </span> </li>
+                                                    <li class="d-flex align-items-center justify-content-between"> Italy <span class="text-success"> 24392 </span> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 box-margin height-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-header border-none bg-transparent d-flex align-items-center justify-content-between p-0 mb-30">
+                                        <div class="widgets-card-title">
+                                            <h5 class="card-title mb-0">Coronavirus Cases</h5>
+                                        </div>
+                                        <div class="dashboard-dropdown">
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dashboardDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-more"></i></button>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dashboardDropdown1">
+                                                    <a class="dropdown-item" href="#"><i class="ti-pencil-alt"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
+                                                    <a class="dropdown-item" href="#"><i class="ti-eraser"></i> Remove</a>
+                                                    <a class="dropdown-item" href="#"><i class="ti-trash"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Chart Area -->
+                                    <div id="apexdonutchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-7 box-margin height-card">
+                            <div class="card code-table">
+                                <div class="card-body pb-0">
+                                    <div class="card-header border-none bg-transparent d-flex align-items-center justify-content-between p-0 mb-30">
+                                        <div class="widgets-card-title">
+                                            <h5 class="card-title mb-0">Most Affected Countries</h5>
+                                        </div>
+                                        <div class="dashboard-dropdown">
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dashboardDropdown7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-more"></i></button>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dashboardDropdown7">
+                                                    <a class="dropdown-item" href="#"><i class="ti-pencil-alt"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
+                                                    <a class="dropdown-item" href="#"><i class="ti-eraser"></i> Remove</a>
+                                                    <a class="dropdown-item" href="#"><i class="ti-trash"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Table -->
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Country</th>
+                                                    <th>Confirmed</th>
+                                                    <th>Today Cases</th>
+                                                    <th>Recovered</th>
+                                                    <th>Today Deaths</th>
+                                                    <th>Deaths</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/5.png" alt=""><span>USA</span>
+                                                    </td>
+                                                    <td>
+                                                        108,161
+                                                    </td>
+                                                    <td>
+                                                        2,48,538
+                                                    </td>
+                                                    <td>
+                                                        18,538
+                                                    </td>
+                                                    <td>
+                                                        78,538
+                                                    </td>
+                                                    <td>
+                                                        1,14722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/6.png" alt=""><span>Italy</span>
+                                                    </td>
+                                                    <td>
+                                                        72,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/7.png" alt=""><span>China</span>
+                                                    </td>
+                                                    <td>
+                                                        12,4161
+                                                    </td>
+                                                    <td>
+                                                        7,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/8.png" alt=""><span>Spain</span>
+                                                    </td>
+                                                    <td>
+                                                        108,161
+                                                    </td>
+                                                    <td>
+                                                        1,2538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        4,722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/9.png" alt=""><span>Germa</span>
+                                                    </td>
+                                                    <td>
+                                                        7,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/10.jpg" alt=""><span>Iran</span>
+                                                    </td>
+                                                    <td>
+                                                        8,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/10.jpg" alt=""><span>Iran</span>
+                                                    </td>
+                                                    <td>
+                                                        8,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/10.jpg" alt=""><span>Iran</span>
+                                                    </td>
+                                                    <td>
+                                                        8,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="img/bg-img/10.jpg" alt=""><span>Iran</span>
+                                                    </td>
+                                                    <td>
+                                                        8,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5 box-margin height-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">WHO Latest News</h4>
+                                    <div class="thumb-area">
+                                        <img src="img/bg-img/17.gif" alt="">
+                                    </div>
+                                    <h4 class="news-content"><a href="https://www.who.int/immunization/diseases/measles/statement_missing_measles_vaccines_covid-19/en/" target="_blank">More than 117 million children at risk of missing out on measles vaccines, as COVID-19 surges</a></h4>
+                                    <p class="mb-0">During this challenging period, the Measles &amp; Rubella Initiative (M&amp;RI) expresses solidarity with families, communities, governments and emergency responders and joins our global immunization and health partners, including those within Gavi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer Area -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Area -->
+                        <footer class="footer-area d-sm-flex justify-content-center align-items-center justify-content-between">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p class="font-13">Created by @<a href="#">Theme-zome.</a></p>
+                            </div>
+                            <div class="fotter-icon text-center">
+                                <p class="mb-0 font-13">2020 @ Cotrak. </p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================
+    ********* Page Wrapper Area End ***********
+    ======================================= -->
+
+    <!-- Must needed plugins to the run this Template -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="js/default-assets/setting.js"></script>
+    <script src="js/default-assets/date-time.js"></script>
+
+    <!-- Active JS -->
+    <script src="js/default-assets/active.js"></script>
+
+    <!-- These plugins only need for the run this page -->
+    <script src="js/default-assets/apexchart.min.js"></script>
+    <script src="js/default-assets/dashboard-active.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/default-assets/vector-map/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="js/default-assets/vector-map/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="js/default-assets/vector-map-va.js"></script>
+    <script src="js/default-assets/vector-map/jvectormap.custom.js"></script>
+    <script src="js/charts/am/am-chart.js"></script>
+    <script src="js/charts/am/gauge.js"></script>
+    <script src="js/charts/am/serial.js"></script>
+    <script src="js/charts/am/light.js"></script>
+    <script src="js/charts/am/ammap.min.js"></script>
+    <script src="js/charts/am/radar.js"></script>
+    <script src="js/default-assets/widget-page-chart-active.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/default-assets/jquery.jConveyorTicker.min.js"></script>
+
+    <script>
+        $(function() {
+            $('.js-conveyor-1').jConveyorTicker();
+        });
+    </script>
+
+</body>
+
+</html>
