@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org/">
 
@@ -25,6 +26,9 @@
             crossorigin=""></script>
      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
+.horizontal-menu{
+    position: relative;
+        }
  .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -64,22 +68,21 @@
             <nav class="navbar top-navbar col-lg-12 col-12 p-0">
                 <div class="container">
                     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo" href="index.html"><img src="img/core-img/logo.png" alt="logo" /></a>
-                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="img/core-img/small-logo.png" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo" href="/"><img src="img/core-img/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo-mini" href="/"><img src="img/core-img/small-logo.png"
+                                alt="logo" /></a>
                     </div>
                     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                        <ul class="navbar-nav navbar-nav-right">
-                            <li class="nav-item dropdown">
-                                <div class="dashboard-infor-mation d-flex flex-wrap align-items-center">
-                                    <h6 class="mb-0 mr-2 font-16 text-white">Date: </h6>
-                                    <div class="dashboard-clock">
-                                        <div class="font-14" id=""></div>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                        <div class="dashboard-infor-mation d-flex flex-wrap align-items-center justify-content-end">
+                            <h6>
+                                <script type='text/javascript'
+                                    src='https://ko-fi.com/widgets/widget_2.js%27%3E'></script>
+                                <script
+                                    type='text/javascript'>kofiwidget2.init('Apoyame con un café', '#29abe0', 'H2H21QSWC'); kofiwidget2.draw();</script>
+                            </h6>
+                        </div>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                            data-toggle="horizontal-menu-toggle">
                             <span class="ti-menu"></span>
                         </button>
                     </div>
@@ -87,21 +90,21 @@
             </nav>
 
 
-            <nav class="bottom-navbar">
+            <nav class="navbar bottom-navbar">
                 <div class="container">
                     <ul class="nav page-navigation">
                         <li class="nav-item">
-                            <a class="nav-link" href="index2.html">
+                            <a class="nav-link" href="/">
                                 <i class="bx bx-home-heart menu-icon"></i>
                                 <span class="menu-title">Inicio</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sintomas.html">
+                            <a class="nav-link" href="sintomas">
                                 <i class="bx bx-certification menu-icon"></i>
                                 <span class="menu-title">Síntomas</span>
                             </a>
-                        </li>        
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -116,9 +119,7 @@
                             <div class="page-title-box d-flex align-items-center justify-content-between">
                                 <h4 class="mb-0 font-18">COVID-19 Coronavirus en Chile</h4>
                                 <h6 class="mb-0 font-18">Date: </h6>
-                                <div class="dashboard-clock">
-                                    <div class="font-14" id="dashboardDate"></div>
-                                </div>
+                                <h6 class="mb-0 font-18" id="dashboardDate"></h6>
                             </div>
                         </div>
                     </div>
@@ -215,8 +216,8 @@
                                     <p class="font-13">Created by @<a href="#">CovidToday.</a></p>
                                 </div>        
                                 <div class="fotter-icon text-center">
-                                    <a href="https://twitter.com/TodayCovid"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" style="color:pink"></i></a>
+                                    <a href="https://twitter.com/TodayCovid"><i class="fa fa-twitter fa-3x"></i></a>
+                                    <a href="#"><i class="fa fa-instagram fa-3x" style="color:pink"></i></a>
                                     <p class="mb-0 font-13">2020 @ CovidToday. </p>
                                 </div>
                             </footer>
