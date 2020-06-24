@@ -52,6 +52,19 @@
     margin-right: 8px;
     opacity: 0.7;
 }
+.bg-rojo{
+    background-color: #ff0000;
+}
+.bg-amarillo{
+    background-color: #ffb900;
+}   
+.bg-naranjo{
+    background-color: #fc7300;
+}
+.bg-azul{
+    background-color: #0000ff;
+}
+    
     </style>
 
 </head>
@@ -68,7 +81,7 @@
             <nav class="navbar top-navbar col-lg-12 col-12 p-0">
                 <div class="container">
                     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo" href="/"><img src="img/core-img/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo" href=""><img th:src="@{/images/core-img/imagen.png}" alt="logo" /></a>
                         <a class="navbar-brand brand-logo-mini" href="/"><img src="img/core-img/small-logo.png"
                                 alt="logo" /></a>
                     </div>
@@ -118,8 +131,7 @@
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
                                 <h4 class="mb-0 font-18">COVID-19 Coronavirus en Chile</h4>
-                                <h6 class="mb-0 font-18">Date: </h6>
-                                <h6 class="mb-0 font-18" id="dashboardDate"></h6>
+                                <h6 class="mb-0 font-18">Date: <h6 id="dashboardDate"></h6></h6>
                             </div>
                         </div>
                     </div>
@@ -131,9 +143,9 @@
                                 <!-- Single Widget -->
                                 <div class="col-sm-12 col-md-6 col-lg-12">
                                     <div class="single-widger-cart mb-30">
-                                        <div class="card bg-primary">
+                                        <div class="card bg-azul">
                                             <div class="card-body">
-                                                <div class="float-right"><img th:src="@{images/bg-img/1.png}" alt=""></div>
+                                                <div class="float-right"><img th:src="@{images/bg-img/casostotales1.png}" alt=""></div>
                                                 <h5 class="font-15">Casos Totales</h5>
                                                 <h3 class="mb-0" th:text="${regiones[16].casos_totales}"></h3>
                                             </div>
@@ -144,9 +156,9 @@
                                 <!-- Single Widget -->
                                 <div class="col-sm-12 col-md-6 col-lg-12">
                                     <div class="single-widger-cart mb-30">
-                                        <div class="card bg-danger">
+                                        <div class="card bg-rojo">
                                             <div class="card-body">
-                                                <div class="float-right"><img th:src="@{images/bg-img/2.png}" alt=""></div>
+                                                <div class="float-right"><img th:src="@{images/bg-img/calavera3.png}" alt=""></div>
                                                 <h5 class="font-15">Muertos Totales</h5>
                                                 <h3 class="mb-0" th:text="${regiones[16].fallecidos}"></h3>
                                             </div>
@@ -157,11 +169,11 @@
                                 <!-- Single Widget -->
                                 <div class="col-sm-12 col-md-6 col-lg-12">
                                     <div class="single-widger-cart mb-30">
-                                        <div class="card bg-success">
+                                        <div class="card bg-naranjo" >
                                             <div class="card-body">
-                                                <div class="float-right"><img th:src="@{images/bg-img/4.png}" alt=""></div>
+                                                <div class="float-right"><img th:src="@{images/bg-img/1.png}" alt=""></div>
                                                 <h5 class="font-15">Activos</h5>
-                                                <h3 class="mb-0" th:text="${activos}"></h3>
+                                                <h3 class="mb-0" th:text="${regiones[16].activos}"></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -170,9 +182,9 @@
                                 <!-- Single Widget -->
                                 <div class="col-sm-12 col-md-6 col-lg-12">
                                     <div class="single-widger-cart mb-30">
-                                        <div class="card bg-warning">
+                                        <div class="card bg-amarillo">
                                             <div class="card-body">
-                                                <div class="float-right"><img th:src="@{/images/bg-img/3.png}" alt=""></div>
+                                                <div class="float-right"><img th:src="@{images/bg-img/2.png}" alt=""></div>
                                                 <h5 class="font-15">Nuevos casos </h5>
                                                 <h3 class="mb-0" th:text="${regiones[16].casos_nuevos_totales}" ></h3>
                                             </div>
@@ -193,7 +205,7 @@
                                                 </div>
 
                                                 <div class="map--body">
-                                                    <div id="mapa" style="position: ; width: 160%; left: 0; height: 60vh;"></div>
+                                                    <div id="mapa" style="position: ; width: 150%; left: 0; height: 60vh;"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -210,17 +222,19 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- Footer Area -->
-                        <footer >
+                        <footer class="footer-area d-sm-flex justify-content-center align-items-center justify-content-between">
                                 <!-- Copywrite Text -->
-                                <div class="copywrite-text">
+                                <div class="text-left">
                                     <p class="font-13">Created by @<a href="#">CovidToday.</a></p>
-                                </div>        
+                                </div>      
                                 <div class="fotter-icon text-center">
                                     <a href="https://twitter.com/TodayCovid"><i class="fa fa-twitter fa-3x"></i></a>
-                                    <a href="#"><i class="fa fa-instagram fa-3x" style="color:pink"></i></a>
+                                    <a href="https://www.instagram.com/covidtoday.cl/"><i class="fa fa-instagram fa-3x" style="color:pink"></i></a>
+                                </div>     
+                                <div class="text-right">  
                                     <p class="mb-0 font-13">2020 @ CovidToday. </p>
                                 </div>
-                            </footer>
+                        </footer>
                     </div>
                 </div>
             </div>
