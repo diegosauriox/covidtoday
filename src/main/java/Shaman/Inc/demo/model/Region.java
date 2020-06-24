@@ -28,7 +28,16 @@ public class Region {
     @Column(name= "reg_fallecidos")
     private String fallecidos;
 
+    @Column(name= "reg_activos")
+    private String activos;
 
+    public String getActivos() {
+        return activos;
+    }
+
+    public void setActivos(String activos) {
+        this.activos = activos;
+    }
 
     public String getCasos_nuevos() {
         return casos_nuevos_con_sintomas;
