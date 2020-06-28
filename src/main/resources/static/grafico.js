@@ -29,7 +29,7 @@ var config = {
     maintainAspectRatio: false,
     title: {
       display: true,
-      text: "Casos confirmados diarios por región",
+      text: "Casos confirmados diarios en Chile",
     },
     tooltips: {
       mode: "label",
