@@ -86,8 +86,8 @@ image.rezise{
             <nav class="navbar top-navbar col-lg-12 col-12 p-0">
                 <div class="container">
                     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo"href=""><img class="rezise" th:src="@{/images/core-img/logo.png}" alt="logo"  width="200" height="600"/></a>
-                        <a class="navbar-brand brand-logo-mini" href="/"><img class="rezise" th:src="@{/images/core-img/logo.png}"
+                        <a class="navbar-brand brand-logo"href=""><img class="rezise" th:src="@{/images/core-img/logo.png}" alt="log"  style="height: 60px;"/></a>
+                        <a class="navbar-brand brand-logo-mini" href="/"><img class="rezise" th:src="@{/images/core-img/logo.png}" style="min-width: 500%;width: auto;height: auto;"
                                 alt="logo" /></a>
                     </div>
                     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -219,9 +219,11 @@ image.rezise{
                             </div>
                         </div>
                     </div>    
+                    <div class="row">
+                        <canvas id="canvas"  width="787" height="332" style="display: block; width: 787px; height: 332px;"></canvas>
+                    </div> 
                 </div>
             </div>
-
             <!-- Footer Area -->
             <div class="container-fluid">
                 <div class="row">
@@ -280,8 +282,8 @@ image.rezise{
     <script src="css/js/script.js"></script>
     <script src="css/js/default-assets/jquery.jConveyorTicker.min.js"></script>
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="grafico.js"></script>
 
 <script th:inline="javascript" charset="ISO-8859-1">
          var data = [[${regiones}]];
