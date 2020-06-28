@@ -73,7 +73,9 @@ fetch("https://chile-coronapi.herokuapp.com/api/v3/historical/nation")
     var nombre = "Chile";
     const entries = Object.entries(data);
     for (let j = 0; j < entries.length - 1; j += 5) {
-      let label = entries[j][0];
+      var date = new Date(entries[j][0]);
+      let label =
+        date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
       let dataset = entries[j][1].confirmed;
       labels.push(label);
       datasets.push(dataset);
