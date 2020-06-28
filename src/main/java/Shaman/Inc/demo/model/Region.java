@@ -23,7 +23,7 @@ public class Region {
     private String casos_nuevos_sin_sintomas;
 
     @Column(name= "reg_casos_nuevos_con_sintomas")
-    private String casos_nuevos_con_sintomas;
+    private String casos_nuevos_con_sintomas;   
 
     @Column(name= "reg_fallecidos")
     private String fallecidos;
