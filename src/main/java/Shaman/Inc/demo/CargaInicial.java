@@ -49,7 +49,9 @@ public class CargaInicial {
             Region region16= new Region();
             region16.setNombre("Magallanes");
             Region region17= new Region();
-            region17.setNombre("Total");
+            region17.setNombre("Se desconoce región de origen");
+            Region region18= new Region();
+            region18.setNombre("Total");
             regionDao.save(region1);
             regionDao.save(region2);
             regionDao.save(region3);
@@ -67,6 +69,7 @@ public class CargaInicial {
             regionDao.save(region15);
             regionDao.save(region16);
             regionDao.save(region17);
+            regionDao.save(region18);
             web.webScrapping(regionDao);
 
         });
