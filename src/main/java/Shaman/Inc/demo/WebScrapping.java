@@ -47,8 +47,8 @@ public class WebScrapping {
             act.setCasos_nuevos_totales(quitarPunto(columna.get(2).text()));
             act.setCasos_nuevos_con_sintomas(quitarPunto(columna.get(3).text()));
             act.setCasos_nuevos_sin_sintomas(quitarPunto(columna.get(4).text()));
-            act.setFallecidos(quitarPunto(columna.get(6).text()));
-            act.setActivos(quitarPunto(columna.get(7).text()));
+            act.setFallecidos(quitarPunto(columna.get(7).text()));
+            act.setActivos(quitarPunto(columna.get(6).text()));
             regionDao.save(act);
 
         }
