@@ -49,7 +49,7 @@ public class CargaInicial {
             Region region16= new Region();
             region16.setNombre("Magallanes");
             Region region17= new Region();
-            region17.setNombre("Se desconoce región de origen");
+            region17.setNombre("Desconocida");
             Region region18= new Region();
             region18.setNombre("Total");
             regionDao.save(region1);
