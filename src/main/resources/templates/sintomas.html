@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">    
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="css/js/default-assets/vector-map/jquery-jvectormap-2.0.2.css">
     <link rel="stylesheet" href="css/default-assets/jquery.jConveyorTicker.min.css">
 
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-          crossorigin=""/>
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-            crossorigin=""></script>
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -37,16 +37,20 @@
     <div class="ecaps-page-wrapper">
         <!-- Sidemenu Area -->
         <div class="horizontal-menu">
-             <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
                 <div class="container">
                     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo"href=""><img class="rezise" th:src="@{/images/core-img/logo2.png}" alt="log"  style="height: 60px;"/></a>
-                        <a class="navbar-brand brand-logo-mini" href="/"><img class="rezise" th:src="@{/images/core-img/logo2.png}" style="min-width: 300%;width: auto;height: auto;"
+                        <a class="navbar-brand brand-logo" href=""><img class="rezise"
+                                th:src="@{/images/core-img/logo2.png}" alt="log" style="height: 60px;" /></a>
+                        <a class="navbar-brand brand-logo-mini" href="/"><img class="rezise"
+                                th:src="@{/images/core-img/logo2.png}" style="min-width: 300%;width: auto;height: auto;"
                                 alt="logo" /></a>
                     </div>
                     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                         
-                         <a href='https://ko-fi.com/H2H21QSWC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi4.png?v=2' border='0' alt='Comprame un café' /></a>
+
+                        <a href='https://ko-fi.com/H2H21QSWC' target='_blank'><img height='36'
+                                style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi4.png?v=2' border='0'
+                                alt='Comprame un café' /></a>
 
                         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                             data-toggle="horizontal-menu-toggle">
@@ -72,142 +76,173 @@
                                 <span class="menu-title">Síntomas</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="regiones">
+                                <i class="bx bx-map menu-icon"></i>
+                                <span class="menu-title">Regiones</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
 
         <!-- Page Content -->
-            <!-- Main Content Area -->
-            <div class="main-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="card box-margin">
-                                <div class="card-body">
-                                    <div class="content-box">
-                                        <div class="inner-box">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <h4 class="card-title mb-1">COVID-19 Coronavirus - Síntomas</h4>
-                                                    <p class="mb-30">Los síntomas más comunes de COVID-19 son fiebre, cansancio y tos seca. Algunos pacientes pueden tener dolores y molestias, congestión nasal, secreción nasal, dolor de garganta o diarrea. Estos síntomas generalmente son leves y comienzan gradualmente. También los síntomas pueden aparecer 2-14 días después de la exposición.</p>
-                                                </div>
-                                                <!-- Single Card -->
-                                                <div class="col-md-6">
-                                                    <div class="virus-symptoms-card mb-50">
-                                                        <div class="icon-thumb"> <img th:src="@{images/icon-img/8.png}" alt=""></div>
-                                                        <div class="single-symptoms-content text-center">
-                                                            <h5><a href="#">Toser y estornudar</a></h5>                  
-                                                        </div>
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="card box-margin">
+                            <div class="card-body">
+                                <div class="content-box">
+                                    <div class="inner-box">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h4 class="card-title mb-1">COVID-19 Coronavirus - Síntomas</h4>
+                                                <p class="mb-30">Los síntomas más comunes de COVID-19 son fiebre,
+                                                    cansancio y tos seca. Algunos pacientes pueden tener dolores y
+                                                    molestias, congestión nasal, secreción nasal, dolor de garganta o
+                                                    diarrea. Estos síntomas generalmente son leves y comienzan
+                                                    gradualmente. También los síntomas pueden aparecer 2-14 días después
+                                                    de la exposición.</p>
+                                            </div>
+                                            <!-- Single Card -->
+                                            <div class="col-md-6">
+                                                <div class="virus-symptoms-card mb-50">
+                                                    <div class="icon-thumb"> <img th:src="@{images/icon-img/8.png}"
+                                                            alt=""></div>
+                                                    <div class="single-symptoms-content text-center">
+                                                        <h5><a href="#">Toser y estornudar</a></h5>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <!-- Single Card -->
-                                                <div class="col-md-6">
-                                                    <div class="virus-symptoms-card mb-50">
-                                                        <div class="icon-thumb"> <img th:src="@{images/icon-img/9.png}" alt=""></div>
-                                                        <div class="single-symptoms-content text-center">
-                                                            <h5><a href="#">Fiebre</a></h5>
-                                                        </div>
+                                            <!-- Single Card -->
+                                            <div class="col-md-6">
+                                                <div class="virus-symptoms-card mb-50">
+                                                    <div class="icon-thumb"> <img th:src="@{images/icon-img/9.png}"
+                                                            alt=""></div>
+                                                    <div class="single-symptoms-content text-center">
+                                                        <h5><a href="#">Fiebre</a></h5>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <!-- Single Card -->
-                                                <div class="col-md-6">
-                                                    <div class="virus-symptoms-card mb-50">
-                                                        <div class="icon-thumb"> <img th:src="@{images/icon-img/11.png}" alt=""></div>
-                                                        <div class="single-symptoms-content text-center">
-                                                            <h5><a href="#">Fuerte dolor de cabeza</a></h5> 
-                                                        </div>
+                                            <!-- Single Card -->
+                                            <div class="col-md-6">
+                                                <div class="virus-symptoms-card mb-50">
+                                                    <div class="icon-thumb"> <img th:src="@{images/icon-img/11.png}"
+                                                            alt=""></div>
+                                                    <div class="single-symptoms-content text-center">
+                                                        <h5><a href="#">Fuerte dolor de cabeza</a></h5>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <!-- Single Card -->
-                                                <div class="col-md-6">
-                                                    <div class="virus-symptoms-card mb-50">
-                                                        <div class="icon-thumb"> <img th:src="@{images/icon-img/12.png}" alt=""></div>
-                                                        <div class="single-symptoms-content text-center">
-                                                            <h5><a href="#">Dificultad para respirar</a></h5>
-                                                        </div>
+                                            <!-- Single Card -->
+                                            <div class="col-md-6">
+                                                <div class="virus-symptoms-card mb-50">
+                                                    <div class="icon-thumb"> <img th:src="@{images/icon-img/12.png}"
+                                                            alt=""></div>
+                                                    <div class="single-symptoms-content text-center">
+                                                        <h5><a href="#">Dificultad para respirar</a></h5>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <!-- Single Card -->
-                                                <div class="col-md-6">
-                                                    <div class="virus-symptoms-card mb-50">
-                                                        <div class="icon-thumb"> <img th:src="@{images/icon-img/13.png}" alt=""></div>
-                                                        <div class="single-symptoms-content text-center">
-                                                            <h5><a href="#">Confusión</a></h5>
-                                                        </div>
+                                            <!-- Single Card -->
+                                            <div class="col-md-6">
+                                                <div class="virus-symptoms-card mb-50">
+                                                    <div class="icon-thumb"> <img th:src="@{images/icon-img/13.png}"
+                                                            alt=""></div>
+                                                    <div class="single-symptoms-content text-center">
+                                                        <h5><a href="#">Confusión</a></h5>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <!-- Single Card -->
-                                                <div class="col-md-6">
-                                                    <div class="virus-symptoms-card mb-50">
-                                                        <div class="icon-thumb"> <img th:src="@{images/icon-img/16.png}" alt=""></div>
-                                                        <div class="single-symptoms-content text-center">
-                                                            <h5><a href="#">Dolor de garganta</a></h5>
-                                                        </div>
+                                            <!-- Single Card -->
+                                            <div class="col-md-6">
+                                                <div class="virus-symptoms-card mb-50">
+                                                    <div class="icon-thumb"> <img th:src="@{images/icon-img/16.png}"
+                                                            alt=""></div>
+                                                    <div class="single-symptoms-content text-center">
+                                                        <h5><a href="#">Dolor de garganta</a></h5>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <div class="col-12">
-                                                    <h4>Otros síntomas</h4>
-                                                    <p>Algunos pacientes pueden tener dolores y molestias, congestión nasal, secreción nasal, dolor de garganta o diarrea. Estos síntomas generalmente son leves y comienzan gradualmente. Algunas personas se infectan pero no desarrollan ningún síntoma y no se sienten mal. La mayoría de las personas (alrededor del 80%) se recuperan de la enfermedad sin necesidad de un tratamiento especial.</p>
-                                                    
-                                                </div>
+                                            <div class="col-12">
+                                                <h4>Otros síntomas</h4>
+                                                <p>Algunos pacientes pueden tener dolores y molestias, congestión nasal,
+                                                    secreción nasal, dolor de garganta o diarrea. Estos síntomas
+                                                    generalmente son leves y comienzan gradualmente. Algunas personas se
+                                                    infectan pero no desarrollan ningún síntoma y no se sienten mal. La
+                                                    mayoría de las personas (alrededor del 80%) se recuperan de la
+                                                    enfermedad sin necesidad de un tratamiento especial.</p>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-xl-4">
-                            <div class="card box-margin">
-                                <div class="card-body">
-                                    <div class="news-thumb">
-                                        <img th:src="@{images/bg-img/16.jpg}" alt="">
-                                    </div>
-                                    <div class="entry mt-5">
-                                        <h5 class="text-primary">Síntomas y que hacer</h5>
-                                        <p class="text-danger"><strong>No debe abandonar su hogar</strong> si tiene alguno de los  <strong>síntomas del coronavirus</strong> (temperatura alta o una tos nueva y continua) llame a 600 360 7777</p>
-                                        <h6 class="text-primary">Quédese en casa para detener la propagación del coronavirus</h6>
-                                        <p>Todos deben quedarse en casa para ayudar a detener la propagación del coronavirus. Solo debe salir de la casa con fines muy limitados:</p>
-                                    </div>
-                                    <div>
-                        <h6><p><i class="fa fa-envelope" aria-hidden="true" style="color:yellow"></i>Correo: contacto@covidtoday.cl </p></h6>
                     </div>
+
+                    <div class="col-xl-4">
+                        <div class="card box-margin">
+                            <div class="card-body">
+                                <div class="news-thumb">
+                                    <img th:src="@{images/bg-img/16.jpg}" alt="">
+                                </div>
+                                <div class="entry mt-5">
+                                    <h5 class="text-primary">Síntomas y que hacer</h5>
+                                    <p class="text-danger"><strong>No debe abandonar su hogar</strong> si tiene alguno
+                                        de los <strong>síntomas del coronavirus</strong> (temperatura alta o una tos
+                                        nueva y continua) llame a 600 360 7777</p>
+                                    <h6 class="text-primary">Quédese en casa para detener la propagación del coronavirus
+                                    </h6>
+                                    <p>Todos deben quedarse en casa para ayudar a detener la propagación del
+                                        coronavirus. Solo debe salir de la casa con fines muy limitados:</p>
+                                </div>
+                                <div>
+                                    <h6>
+                                        <p><i class="fa fa-envelope" aria-hidden="true" style="color:yellow"></i>Correo:
+                                            contacto@covidtoday.cl </p>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Footer Area -->
-                <div class="container-fluid">
+            <!-- Footer Area -->
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         <!-- Footer Area -->
-                        <footer class="footer-area d-sm-flex justify-content-center align-items-center justify-content-between">
-                                <!-- Copywrite Text -->
-                                <div class="text-left">
-                                    <p class="font-13">Created by @<a href="#">CovidToday.</a></p>
-                                </div>      
-                                <div class="fotter-icon text-center">
-                                    <a href="https://twitter.com/TodayCovid"><i class="fa fa-twitter fa-3x"></i></a>
-                                    <a href="https://www.instagram.com/covidtoday.cl/"><i class="fa fa-instagram fa-3x" style="color:pink"></i></a>
-                                </div>     
-                                <div class="text-right">  
-                                    <p class="mb-0 font-13">2020 @ CovidToday. </p>
-                                </div>
+                        <footer
+                            class="footer-area d-sm-flex justify-content-center align-items-center justify-content-between">
+                            <!-- Copywrite Text -->
+                            <div class="text-left">
+                                <p class="font-13">Created by @<a href="#">CovidToday.</a></p>
+                            </div>
+                            <div class="fotter-icon text-center">
+                                <a href="https://twitter.com/TodayCovid"><i class="fa fa-twitter fa-3x"></i></a>
+                                <a href="https://www.instagram.com/covidtoday.cl/"><i class="fa fa-instagram fa-3x"
+                                        style="color:pink"></i></a>
+                            </div>
+                            <div class="text-right">
+                                <p class="mb-0 font-13">2020 @ CovidToday. </p>
+                            </div>
                         </footer>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
     </div>
 
     <!-- ======================================
