@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
 @Controller
 @RequestMapping(value = "")
 public class mapaController {
@@ -27,18 +26,23 @@ public class mapaController {
 
     @RequestMapping(value = "")
     public String mostrar_mapa(Model modelo) throws IOException {
-        WebScrapping web= new WebScrapping();
-        String activos=web.webScappingActivos();
+        WebScrapping web = new WebScrapping();
+        String activos = web.webScappingActivos();
         modelo.addAttribute("regiones", regionDao.findAll());
-        modelo.addAttribute("activos",activos);
+        modelo.addAttribute("activos", activos);
         return "index2";
     }
+
     @RequestMapping(value = "sintomas")
     public String mostrar_sintomas(Model modelo) throws IOException {
         modelo.addAttribute("regiones", regionDao.findAll());
         return "sintomas";
     }
 
-
+    @RequestMapping(value = "regiones")
+    public String mostrar_tabla(Model modelo) throws IOException {
+        modelo.addAttribute("regiones", regionDao.findAll());
+        return "regiones";
+    }
 
 }
