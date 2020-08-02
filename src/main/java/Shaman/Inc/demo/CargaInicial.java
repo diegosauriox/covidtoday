@@ -29,7 +29,7 @@ public class CargaInicial {
             Region region6= new Region();
             region6.setNombre("Valparaíso");
             Region region7= new Region();
-            region7.setNombre("Metropolitana");
+            region7.setNombre("RM");
             Region region8= new Region();
             region8.setNombre("O’Higgins");
             Region region9= new Region();
